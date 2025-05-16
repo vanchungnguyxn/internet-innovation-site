@@ -80,6 +80,18 @@
     }, appearOptions);
 
     faders.forEach(fader => appearOnScroll.observe(fader));
+    const descriptions = {
+  vn: ".vn domain is Vietnam’s national digital identity. It builds trust and local branding online.",
+  ip: "IP/ASN ensures routing and connectivity between Vietnamese networks and the world.",
+  dns: "DNS allows people to access websites using names instead of numeric addresses.",
+  vnix: "VNIX helps Vietnamese ISPs exchange data locally, reducing international latency and cost."
+};
+
+document.querySelectorAll('.item').forEach(el => {
+  el.addEventListener('click', () => {
+    document.getElementById('infoBox').textContent = descriptions[el.id];
+  });
+});
   </script>
 </body>
 </html>
