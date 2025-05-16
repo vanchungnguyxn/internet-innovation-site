@@ -2,96 +2,217 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vietnam Internet Innovation</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <style>
+    header {
+      background: linear-gradient(135deg, #003366, #0059b3);
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .idea-box {
+      background: #e6f2ff;
+      border-left: 5px solid #0059b3;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+    }
+
+    .infographic {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 2rem auto;
+    }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #1565c0;
+      color: white;
+      padding: 1rem;
+      border-radius: 50%;
+      font-weight: bold;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .item {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: #e3f2fd;
+      border: 2px solid #1565c0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .item:hover {
+      background: #bbdefb;
+    }
+
+    #vn     { top: 0; left: 110px; }
+    #ip     { top: 110px; left: 220px; }
+    #dns    { top: 220px; left: 110px; }
+    #vnix   { top: 110px; left: 0; }
+
+    .info-box {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #f0f4ff;
+      border-left: 5px solid #1565c0;
+      border-radius: 0.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      min-height: 60px;
+      font-style: italic;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 2rem 0;
+      background: #eceff1;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Vietnam's Internet Resources</h1>
     <p>Innovation Through Resolution 57-NQ/TW</p>
   </header>
 
-  <main>
-    <section class="fade-in">
-      <h2>Role of National Internet Resources</h2>
-      <ul>
-        <li><strong>.vn domain:</strong> Vietnam's digital identity</li>
-        <li><strong>IP/ASN:</strong> Reliable routing for global network</li>
-        <li><strong>DNS:</strong> Name resolution system of the Internet</li>
-        <li><strong>VNIX:</strong> Local internet exchange for better speed</li>
-      </ul>
-    </section>
+  <nav class="container-fluid">
+    <ul><li><strong>Digital Vietnam</strong></li></ul>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#ideas">Ideas</a></li>
+      <li><a href="#sources" role="button">Sources</a></li>
+    </ul>
+  </nav>
 
-    <section class="fade-in">
-      <h2>Driving Innovation</h2>
-      <ul>
-        <li>Boosts digital creativity and economic growth</li>
-        <li>Supports national cybersecurity and sovereignty</li>
-        <li>Enables AI, 5G, IoT development</li>
-      </ul>
-    </section>
+  <main class="container">
 
-    <section class="fade-in">
-      <h2>5 Innovative Ideas</h2>
-      <div class="idea-box"><strong>.vn Startup Program:</strong> Free domains for youth startups</div>
-      <div class="idea-box"><strong>IPv6 Hackathons:</strong> Build apps using IPv6 only</div>
-      <div class="idea-box"><strong>Blockchain DNS Sandbox:</strong> Test decentralized systems</div>
-      <div class="idea-box"><strong>AI-Powered VNIX:</strong> Real-time anomaly detection</div>
-      <div class="idea-box"><strong>Digital Twin Infrastructure:</strong> Simulate changes virtually</div>
-    </section>
+    <div class="grid">
+      <section class="fade-in">
+        <hgroup>
+          <h2>Role of National Internet Resources</h2>
+          <h3>Vietnam’s digital pillars</h3>
+        </hgroup>
+        <ul>
+          <li><strong>.vn domain:</strong> Vietnam's digital identity</li>
+          <li><strong>IP/ASN:</strong> Reliable routing for global network</li>
+          <li><strong>DNS:</strong> Name resolution system of the Internet</li>
+          <li><strong>VNIX:</strong> Local internet exchange for better speed</li>
+        </ul>
+      </section>
 
-    <section class="fade-in">
-      <h2>Sources</h2>
-      <ul>
-        <li>Resolution 57-NQ/TW, Politburo (2020)</li>
-        <li><a href="https://vnnic.vn" target="_blank">VNNIC</a></li>
-        <li><a href="https://internet-conference.vn" target="_blank">VNNIC Conference</a></li>
-      </ul>
-    </section>
+      <section class="fade-in">
+        <hgroup>
+          <h2>Driving Innovation</h2>
+          <h3>Why it matters</h3>
+        </hgroup>
+        <ul>
+          <li>Boosts digital creativity and economic growth</li>
+          <li>Supports national cybersecurity and sovereignty</li>
+          <li>Enables AI, 5G, IoT development</li>
+        </ul>
+      </section>
+
+      <section class="fade-in" id="ideas">
+        <hgroup>
+          <h2>5 Innovative Ideas</h2>
+          <h3>Creative uses of Internet resources</h3>
+        </hgroup>
+        <div class="idea-box"><strong>.vn Startup Program:</strong> Free domains for youth startups</div>
+        <div class="idea-box"><strong>IPv6 Hackathons:</strong> Build apps using IPv6 only</div>
+        <div class="idea-box"><strong>Blockchain DNS Sandbox:</strong> Test decentralized systems</div>
+        <div class="idea-box"><strong>AI-Powered VNIX:</strong> Real-time anomaly detection</div>
+        <div class="idea-box"><strong>Digital Twin Infrastructure:</strong> Simulate changes virtually</div>
+      </section>
+
+      <section class="fade-in" id="sources">
+        <hgroup>
+          <h2>Sources</h2>
+          <h3>Official documents and conferences</h3>
+        </hgroup>
+        <ul>
+          <li>Resolution 57-NQ/TW, Politburo (2020)</li>
+          <li><a href="https://vnnic.vn" target="_blank">VNNIC</a></li>
+          <li><a href="https://internet-conference.vn" target="_blank">VNNIC Conference</a></li>
+        </ul>
+      </section>
+
+      <section class="fade-in">
+        <hgroup>
+          <h2>Interactive Infographic</h2>
+          <h3>National Internet Infrastructure</h3>
+        </hgroup>
+        <div class="infographic">
+          <div class="center">Internet Infrastructure</div>
+          <div class="item" id="vn">.vn</div>
+          <div class="item" id="ip">IP/ASN</div>
+          <div class="item" id="dns">DNS</div>
+          <div class="item" id="vnix">VNIX</div>
+        </div>
+        <div class="info-box" id="infoBox">Click a component to learn more.</div>
+      </section>
+    </div>
+
   </main>
-<section class="fade-in">
-  <h2>Interactive Infographic: National Internet Infrastructure</h2>
-  <div class="infographic">
-    <div class="center">Internet Infrastructure</div>
-    <div class="item" id="vn">.vn</div>
-    <div class="item" id="ip">IP/ASN</div>
-    <div class="item" id="dns">DNS</div>
-    <div class="item" id="vnix">VNIX</div>
-  </div>
-  <div class="info-box" id="infoBox">Click a component to learn more.</div>
-</section>
 
   <footer>
     Created for Internet Governance Track · 2025
   </footer>
 
   <script>
-    // Fade in animation on scroll
     const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.1 };
-
     const appearOnScroll = new IntersectionObserver(function(entries, observer) {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
         entry.target.classList.add('appear');
         observer.unobserve(entry.target);
       });
-    }, appearOptions);
+    }, { threshold: 0.1 });
 
     faders.forEach(fader => appearOnScroll.observe(fader));
-    const descriptions = {
-  vn: ".vn domain is Vietnam’s national digital identity. It builds trust and local branding online.",
-  ip: "IP/ASN ensures routing and connectivity between Vietnamese networks and the world.",
-  dns: "DNS allows people to access websites using names instead of numeric addresses.",
-  vnix: "VNIX helps Vietnamese ISPs exchange data locally, reducing international latency and cost."
-};
 
-document.querySelectorAll('.item').forEach(el => {
-  el.addEventListener('click', () => {
-    document.getElementById('infoBox').textContent = descriptions[el.id];
-  });
-});
+    const descriptions = {
+      vn: ".vn domain is Vietnam’s national digital identity. It builds trust and local branding online.",
+      ip: "IP/ASN ensures routing and connectivity between Vietnamese networks and the world.",
+      dns: "DNS allows people to access websites using names instead of numeric addresses.",
+      vnix: "VNIX helps Vietnamese ISPs exchange data locally, reducing international latency and cost."
+    };
+
+    document.querySelectorAll('.item').forEach(el => {
+      el.addEventListener('click', () => {
+        document.getElementById('infoBox').textContent = descriptions[el.id];
+      });
+    });
   </script>
 </body>
 </html>
